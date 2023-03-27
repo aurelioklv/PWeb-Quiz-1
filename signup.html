@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.4.js"
         integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
@@ -19,16 +18,22 @@
             font-family: 'Roboto Slab';
             font-size: 1.5rem;
             font-weight: 300;
+            border: none;
         }
 
         div#contact_form {
             margin: 0 auto;
-            width: 800px;
+            width: 30%;
             display: flex;
             align-items: stretch;
             justify-content: space-evenly;
             border: 2px solid black;
             padding: 10px;
+            border-radius: 20px;
+        }
+
+        fieldset {
+            border: none;
         }
 
         div.input-box {
@@ -40,12 +45,12 @@
         div.input-box label {
             display: inline-block;
             margin: 10px 10px 10px 0;
-            width: 20%;
         }
 
         div.input-box input {
             font-size: 1.5rem;
             border: 1px solid #ccc;
+            border-radius: 8px;
             padding: 4px 8px;
             flex: 1;
         }
@@ -57,6 +62,7 @@
             border: 1px solid black;
             margin: 10px;
             padding: 4px 40px;
+            border-radius: 10px;
         }
 
         h1 {
@@ -135,7 +141,9 @@
                     sendData($(this)).done(function () {
                         $("#contact_form").html("<div id='message'></div>");
                         $("#message")
-                            .html("<h2>Account created</h2>")
+                            .html("<h2>Verification email sent</h2>")
+                            .append("<p>Check your email to verify your account</p>")
+                            .append("<a href='index.html'>Back to page</a>")
                             .hide()
                             .fadeIn(1500);
                     });
