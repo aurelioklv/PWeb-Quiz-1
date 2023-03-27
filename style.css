@@ -1,0 +1,18 @@
+body {
+    height: 2000px;
+    color: #fff;
+    background-color: black;
+}
+
+.card {
+    height: 10rem;
+}
+
+.news h4,
+.news p {
+    color: #fff;
+}
+
+.card-title {
+    color: #fff;
+}
