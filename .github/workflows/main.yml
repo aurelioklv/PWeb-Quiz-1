@@ -14,4 +14,4 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: tugas-quiz-1-news-portal/
+          server-dir: quiz-1-news-portal/
